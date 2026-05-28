@@ -1,0 +1,18 @@
+# all these can copy to: /etc/bash.bashrc
+# but any settings in ~/.bashrc can overwrite PS1 or other settings, so remember to remove them if needed.
+# bashrc: every new interactive shell. first /etc/bash.bashrc, then ~/.bashrc
+# profile & bash_profile: only login shell
+# new users' bashrc / profile comes from /etc/skel/. modify them to affect all new users.
+# be sure to correctly wrap ctrl sequences in `\[` and `\]`,
+# otherwise bash line break with long prompt won't work correctly.
+export PS1="\[[1;30m\]\u@G@\[[1;31m\]\w\[[1;30m\]>\[[m\] "
+alias g=git
+alias ls="ls --color"
+alias gs="git status"
+alias gp="git push"
+alias gpl="git pull"
+export LANGUAGE=C.UTF-8
+export LC_ALL=C.UTF-8
+export LC_TERMINAL=iTerm2
+export LC_CTYPE=C.UTF-8
+export LANG=C.UTF-8
