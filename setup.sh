@@ -25,7 +25,7 @@ ok "基本套件安裝完成"
 
 # ─── 3. Node.js (nodesource) ──────────────────
 # 若系統 nodejs 版本過舊, 先用 nodesource 裝新版
-if ! node --version 2>/dev/null | grep -qE '^v(18|20|22|23|24)'; then
+if ! node --version 2>/dev/null | grep -qE '^v(18|20|22|23|24)' || ! npm --version &>/dev/null; then
   info "安裝 Node.js 20.x (nodesource)..."
   curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
   sudo apt-get install -y nodejs
